@@ -29,10 +29,10 @@ firmware = '''{
     "name": "Redmi8",
     "hardware": "X08C",
     "type": "开发版",
-    "version": "1.24.8",
-    "link": "https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/x08c/payload_1.24.8_c0015.bin",
-    "hash": "c021d2dae1584e54e7410bc3c70c0015",
-    "extra": "{\\"FILE_HASH\\":\\"NNqEL4AMcKrUKRnYS3p1PLil1uFhROGAuXetLZj2UtM=\\",\\"FILE_SIZE\\":\\"685322148\\",\\"METADATA_HASH\\":\\"L/7OCXzQ5EkLXw+qwqHhiSSPGmJe7iEvfcjT1vPcCJ4=\\",\\"METADATA_SIZE\\":\\"72282\\"}"
+    "version": "1.24.9",
+    "link": "https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/x08c/payload_1.24.9_44ad2.bin",
+    "hash": "00aeb99eb060134ff347b31136044ad2",
+    "extra": "{\\"FILE_HASH\\":\\"3w7Q8oPH/QpT0M0vPkQI7gCfXeOU+VWrvmkUtPHIxk8=\\",\\"FILE_SIZE\\":\\"730927977\\",\\"METADATA_HASH\\":\\"0fOZxyqpbDNd05FhiV5t6mOxkSc2Yv/30tU3zJCUg0c=\\",\\"METADATA_SIZE\\":\\"72346\\"}"
   },
   {
     "name": "RedmiPro8",
