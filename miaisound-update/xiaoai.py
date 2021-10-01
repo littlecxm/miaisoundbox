@@ -19,29 +19,29 @@ firmware = '''{
     "FirmWare":[{
     "name": "小米Pro8",
     "hardware": "X08A",
-    "type": "开发版",
-    "version": "1.24.9",
-    "link": "https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/x08a/payload_1.24.9_90df0.bin",
-    "hash": "00c355fbae2104aa6051aa34893f86a5",
-    "extra": "{\\"FILE_HASH\\":\\"556v2+l2mZQkStXvdNx8Lvt4hgQqkWOyfYI80b35/oo=\\",\\"FILE_SIZE\\":\\"731185073\\",\\"METADATA_HASH\\":\\"6iW70bJYkmIRTd6coVO+pm+9eLZjmiBDdfBRZIJQts8=\\",\\"METADATA_SIZE\\":\\"72341\\"}"
+    "type": "测试版",
+    "version": "1.27.10",
+    "link": "https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/x08a/payload_1.27.10_3e554.bin",
+    "hash": "e2f51a3b886bbb02d41032583e43e554",
+    "extra": "{\\"FILE_HASH\\": \\"yfdCcia9aWiCTagB0yEB2nGh2fG2AOzqTBBdv6sWpGo=\\", \\"FILE_SIZE\\": \\"771026959\\", \\"METADATA_HASH\\": \\"R2C+JnZq/T6sq5HYzNsF+XYCTg1uY38T04uHkuqKMik=\\", \\"METADATA_SIZE\\": \\"72410\\"}"
   },
-    {
-    "name": "Redmi8",
-    "hardware": "X08C",
-    "type": "开发版",
-    "version": "1.24.9",
-    "link": "https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/x08c/payload_1.24.9_44ad2.bin",
-    "hash": "00aeb99eb060134ff347b31136044ad2",
-    "extra": "{\\"FILE_HASH\\":\\"3w7Q8oPH/QpT0M0vPkQI7gCfXeOU+VWrvmkUtPHIxk8=\\",\\"FILE_SIZE\\":\\"730927977\\",\\"METADATA_HASH\\":\\"0fOZxyqpbDNd05FhiV5t6mOxkSc2Yv/30tU3zJCUg0c=\\",\\"METADATA_SIZE\\":\\"72346\\"}"
-  },
+	{
+		"name": "Redmi8",
+		"hardware": "X08C",
+		"type": "测试版",
+		"version": "1.27.10",
+		"link": "https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/x08c/payload_1.27.10_7f4c5.bin",
+		"hash": "ff5682d361bb293eb098d41d7d27f4c5",
+		"extra": "{\\"FILE_HASH\\": \\"xy5UwnBuAgBLCPw9Ck/9KQ/VVkNhsQOUPDS13U1SdIU=\\", \\"FILE_SIZE\\": \\"769967109\\", \\"METADATA_HASH\\": \\"aSJo0dOrxvKLhnanQpbV+YcG5fxQay6dh1N0It8t+/M=\\", \\"METADATA_SIZE\\": \\"72412\\"}"
+	},
   {
     "name": "RedmiPro8",
     "hardware": "X08E",
-    "type": "开发版",
-    "version": "1.24.9",
-    "link": "https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/x08e/payload_1.24.9_0f400.bin",
-    "hash": "603e615dab4ebe966a36b1c5e000f400",
-    "extra": "{\\"FILE_HASH\\":\\"WDOaoOt4pp9ZzAyBz8y3xTwwdmN0O8J8n7lCUa6qKMk=\\",\\"FILE_SIZE\\":\\"745108921\\",\\"METADATA_HASH\\":\\"3ehZ/B7w/qNpp94jC3HTiJlcXPf/YeMdGm1KB1OXPdI=\\",\\"METADATA_SIZE\\":\\"51378\\"}"
+    "type": "测试版",
+    "version": "1.27.10",
+    "link": "https://cdn.cnbj1.fds.api.mi-img.com/xiaoqiang/rom/x08e/payload_1.27.10_e55cc.bin",
+    "hash": "3d9343a508992cd936c5de83a9fe55cc",
+    "extra": "{\\"FILE_HASH\\": \\"KAN16HGMAxM4ZPwRvEm7R+RFpKadkcAxUcPzfwUuGoo=\\", \\"FILE_SIZE\\": \\"785113127\\", \\"METADATA_HASH\\": \\"yKtWZkCAqzrWeFjCCe17FmT1hWXltWPRFXZC2n1kRIE=\\", \\"METADATA_SIZE\\": \\"51441\\"}"
   }]
 }'''
 
