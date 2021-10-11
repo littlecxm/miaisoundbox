@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 #https://github.com/flying1008
+# Form implementation generated from reading ui file 'f:\pythons\get_ota.ui'
+#
 # Created by: PyQt5 UI code generator 5.15.4
 #
 # WARNING: Any manual changes made to this file will be lost when pyuic5 is
@@ -15,6 +17,7 @@ import time
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QObject , pyqtSignal,QThread
+from PyQt5.QtWidgets import QMessageBox,QWidget
 
 class WorkThread(QThread):
     # 自定义信号对象。参数str就代表这个信号可以传一个字符串
@@ -80,11 +83,11 @@ class WorkThread(QThread):
         rsp = urllib.request.urlopen(req)
 
         file_name = model +"_"+ channel+"_"+ "version.txt"
-        file = open(file_name,"a+")
         if rsp.getcode() == 200:
             result = rsp.read().decode('utf-8')
             json_format=json.loads(result)
             if json_format.get('data') is not  None and  len(json.dumps(json_format.get('data'),indent=2,ensure_ascii=False)) > 2:
+                file = open(file_name,"a+")
                 self.trigger.emit(json.dumps(json_format.get('data'),indent=2,ensure_ascii=False))   
                 time.sleep(0.5)   
                 file.write(version)
@@ -103,7 +106,7 @@ class WorkThread(QThread):
 class Ui_mainWindow():
     def setupUi(self, mainWindow):
         mainWindow.setObjectName("mainWindow")
-        mainWindow.resize(793, 734)
+        mainWindow.resize(793, 560)
         mainWindow.setUnifiedTitleAndToolBarOnMac(True)
         self.centralwidget = QtWidgets.QWidget(mainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -111,55 +114,55 @@ class Ui_mainWindow():
         self.label.setGeometry(QtCore.QRect(50, 40, 91, 21))
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(50, 110, 91, 21))
+        self.label_2.setGeometry(QtCore.QRect(50, 80, 91, 21))
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(50, 180, 91, 21))
+        self.label_3.setGeometry(QtCore.QRect(50, 120, 91, 21))
         self.label_3.setObjectName("label_3")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(110, 40, 113, 21))
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_3.setGeometry(QtCore.QRect(110, 180, 113, 21))
+        self.lineEdit_3.setGeometry(QtCore.QRect(110, 120, 113, 21))
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(160, 310, 93, 28))
+        self.pushButton.setGeometry(QtCore.QRect(160, 240, 93, 28))
         self.pushButton.setObjectName("pushButton")
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(70, 360, 661, 321))
+        self.textEdit.setGeometry(QtCore.QRect(70, 280, 661, 220))
         self.textEdit.setObjectName("textEdit")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(270, 40, 261, 16))
         self.label_4.setObjectName("label_4")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(270, 110, 461, 16))
+        self.label_5.setGeometry(QtCore.QRect(270, 80, 461, 16))
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(270, 180, 151, 16))
+        self.label_6.setGeometry(QtCore.QRect(270, 120, 151, 16))
         self.label_6.setObjectName("label_6")
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setGeometry(QtCore.QRect(110, 110, 111, 22))
+        self.comboBox.setGeometry(QtCore.QRect(110, 80, 111, 22))
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(50, 240, 61, 16))
+        self.label_7.setGeometry(QtCore.QRect(50, 160, 61, 16))
         self.label_7.setObjectName("label_7")
         self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_4.setGeometry(QtCore.QRect(110, 240, 113, 21))
+        self.lineEdit_4.setGeometry(QtCore.QRect(110, 160, 113, 21))
         self.lineEdit_4.setObjectName("lineEdit_4")
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
-        self.label_8.setGeometry(QtCore.QRect(270, 240, 271, 20))
+        self.label_8.setGeometry(QtCore.QRect(270, 160, 271, 20))
         self.label_8.setObjectName("label_8")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(300, 310, 93, 28))
+        self.pushButton_2.setGeometry(QtCore.QRect(300, 240, 93, 28))
         self.pushButton_2.setObjectName("pushButton_2")
         self.label_9 = QtWidgets.QLabel(self.centralwidget)
-        self.label_9.setGeometry(QtCore.QRect(90, 280, 431, 16))
+        self.label_9.setGeometry(QtCore.QRect(90, 200, 431, 16))
         self.label_9.setObjectName("label_9")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(440, 310, 93, 28))
+        self.pushButton_3.setGeometry(QtCore.QRect(440, 240, 93, 28))
         self.pushButton_3.setObjectName("pushButton_3")
         mainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(mainWindow)
@@ -214,7 +217,12 @@ class Ui_mainWindow():
         self.work.range_ver=range_ver
         file_name = model +"_"+ channel+"_"+ "version.txt"
         if os.path.exists(file_name):
-            os.remove(file_name)
+            try:
+                os.remove(file_name)
+            except:
+                w = QtWidgets.QWidget()
+                QMessageBox.information(w,"提示","写入文件失败，请稍后再试",QMessageBox.Yes)
+                return
         self.work.working = True
         self.work.start()
 
