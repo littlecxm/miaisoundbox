@@ -88,12 +88,22 @@ class WorkThread(QThread):
             json_format=json.loads(result)
             if json_format.get('data') is not  None and  len(json.dumps(json_format.get('data'),indent=2,ensure_ascii=False)) > 2:
                 file = open(file_name,"a+")
+                print(json.dumps(json_format.get('data'),indent=2,ensure_ascii=False)) 
+                if json_format.get('data').get("currentInfo") is not None :
+                    releaseDate = (json_format.get('data').get("currentInfo"))["releaseDate"]               
+                    timeArray = time.localtime(int(releaseDate)/1000)
+                    otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+                    (json_format.get('data').get("currentInfo"))["releaseDate"] = otherStyleTime
+                if json_format.get('data').get("upgradeInfo") is not None :
+                    releaseDate = (json_format.get('data').get("upgradeInfo"))["releaseDate"]
+                    timeArray = time.localtime(int(releaseDate)/1000)  
+                    otherStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+                    (json_format.get('data').get("upgradeInfo"))["releaseDate"] = otherStyleTime
                 self.trigger.emit(json.dumps(json_format.get('data'),indent=2,ensure_ascii=False))   
                 time.sleep(0.5)   
                 file.write(version)
                 file.write("\n")
                 file.write(json.dumps(json_format.get('data'),indent=2,ensure_ascii=False))
-                print(json.dumps(json_format.get('data'),indent=2,ensure_ascii=False)) 
                 file.write("\n")
                 file.close()
             else:
